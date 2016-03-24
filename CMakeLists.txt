@@ -19,3 +19,6 @@ endif()
 include_directories(include)
 
 add_library(udew src/udew.c include/udew.h)
+
+add_executable(testudew udewTest/udewTest.c include/udew.h)
+target_link_libraries(testudew udew ${CMAKE_DL_LIBS})
